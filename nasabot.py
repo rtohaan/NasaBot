@@ -2,9 +2,11 @@ import discord
 from discord.ext import commands
 import nasapy
 from datetime import datetime
+import discordtoken from token
+import nasatoken from token
 
 client = commands.Bot(command_prefix='.')
-token = 'ODIyMTc5MDgzMDg1NDE0NDAw.YFOf8A.Tm2_hJX14h9OG4EGXDAkfsg2Zx8' #this is where your bot token would go.
+token = discordtoken #this is where your bot token would go.
 
 #
 @client.event
@@ -18,7 +20,7 @@ async def on_ready():
 async def nasa(message):
     channel = message.channel
     
-    k = 'mduhkZOlZ6f0zlTFRuAffqbfJ3wYICBcc6M9VKes'
+    k = nasatoken
 
     # Creates object to store apikey
     nasa = nasapy.Nasa(key=k)
