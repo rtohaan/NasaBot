@@ -1,1 +1,1 @@
-worker: python bot/nasabot.py
+worker: python nasabot.py
