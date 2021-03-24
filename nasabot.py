@@ -6,7 +6,7 @@ from keys import discordkey, nasakey
 
 
 client = commands.Bot(command_prefix='.')
-token = '' #this is where your bot token would go.
+discordtoken = '' #this is where your bot token would go.
 
 #
 @client.event
@@ -20,10 +20,10 @@ async def on_ready():
 async def nasa(message):
     channel = message.channel
     
-    k = ''
+    nasakey = ''
 
     # Creates object to store apikey
-    nasa = nasapy.Nasa(key=k)
+    nasa = nasapy.Nasa(key=nasakey)
 
     # Gets today's date
     d = datetime.today().strftime('%Y-%m-%d')
