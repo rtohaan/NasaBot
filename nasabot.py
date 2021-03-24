@@ -2,8 +2,8 @@ import discord
 from discord.ext import commands
 import nasapy
 from datetime import datetime
-import discordtoken from token
-import nasatoken from token
+from keys import discordtoken, nasatoken
+
 
 client = commands.Bot(command_prefix='.')
 token = discordtoken #this is where your bot token would go.
@@ -35,7 +35,8 @@ async def nasa(message):
 
     if ("hdurl" in apod.keys()):
         url = apod["hdurl"]
-            
+    
+    #Prints url in chat
     await channel.send(f'{url}')
 
 
