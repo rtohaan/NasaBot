@@ -6,7 +6,7 @@ from keys import discordkey, nasakey
 
 
 client = commands.Bot(command_prefix='!')
-discordtoken = 'ODIyMTc5MDgzMDg1NDE0NDAw.YFOf8A.lcfVWmNLymVGXXwgc8lv0AeUycA' #this is where your bot token would go.
+discordtoken = '' #this is where your bot token would go.
 
 #
 @client.event
@@ -23,7 +23,7 @@ async def nasa(message):
     author = message.author.name
     await channel.send(f"{author}")
     
-    nasakey = 'mduhkZOlZ6f0zlTFRuAffqbfJ3wYICBcc6M9VKes'
+    nasakey = ''
 
     # Creates object to store apikey
     nasa = nasapy.Nasa(key=nasakey)
