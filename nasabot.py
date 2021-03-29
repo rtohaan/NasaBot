@@ -5,8 +5,8 @@ from datetime import datetime
 from keys import discordkey, nasakey
 
 
-client = commands.Bot(command_prefix='.')
-discordtoken = '' #this is where your bot token would go.
+client = commands.Bot(command_prefix='!')
+discordtoken = 'ODIyMTc5MDgzMDg1NDE0NDAw.YFOf8A.lcfVWmNLymVGXXwgc8lv0AeUycA' #this is where your bot token would go.
 
 #
 @client.event
@@ -20,7 +20,10 @@ async def on_ready():
 async def nasa(message):
     channel = message.channel
     
-    nasakey = ''
+    author = message.author.name
+    await channel.send(f"{author}")
+    
+    nasakey = 'mduhkZOlZ6f0zlTFRuAffqbfJ3wYICBcc6M9VKes'
 
     # Creates object to store apikey
     nasa = nasapy.Nasa(key=nasakey)
